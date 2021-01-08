@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8"/>
+	  <title> Site Teste de Animais</title>
+	  <link rel="stylesheet" type="text/css" href="_css/estiloanimal.css"/>
+	  </head>
+  <body>
+  <div id="interface">
+	  <div id="leao">
+ <p></p>
+	  </div>
+  <header id="cabecalho">
+    <hgroup>
+	<h1 >Biologia da Vida </h1>
+	<h4>por Willian Gonçales</h4>
+	<h2>Aqui lhes apresentarei tudo sobre os animais</h2></hgroup> </header>
+	
+	<div id="corpo">
+	
+	<nav id="menu">
+	<ul id="listaPrincipal">
+	<li><a href="Cordados.html" target="blank">Cordados</a></li>
+	<li><a href="Aves.html" target="blank">Aves</a></li>
+	<li><a href="Peixes.html" target="blank">Peixes</a></li>
+	<li> <a href="Repteis.html" target="blank">Répteis</a></li>
+	<li><a href="Mamiferos.html" target="blank">Mamíferos</a></li>
+	<li> <a href="Anfibios.html" target="blank">Anfíbios </a></li>
+	</ul></nav>
+	<article>
+	<h1>Cordados</h1>
+	<button type="button" id="botao"> Curiosidades</button>
+	<p>Os animais cordados são os que possuem a notocorda  e /ou a coluna vertebral, praticamente existem cinco grandes grupos dentro desse filo,
+	neste site apresentarei algumas características gerais e particulares de cada animalzinho apresentado por classes.</p>
+	
+	<figure class="cordados">
+	<img id="leoa" src="_imagens/leoes.jpg"/>
+	<figcaption>
+		<h4>Um exemplo de uma leoa com seu filhote</h4>
+	</figcaption>
+	
+	</figure>
+
+	
+	
+	<h2>Veja um exemplo de animal doméstico muito bonitinho:</h2>
+	<p id="curiosidade" ></p>
+	
+	AQUI ENTRA UM VÍDEO
+	</article>
+	</div>
+	
+<footer id="rodape" >
+<h6 > por Jonathan Willian</h6>
+<p style="font-size:10pt;" >Um amor infinito pela natureza<p>
+</div>
+	</body>
+
+
+	<script>
+		
+
+		function mudaCor(tag,cor){
+			tag.style.backgroundColor=cor;
+		}
+          function curioso(){
+			  var a=document.getElementById("curiosidade");
+			  a.innerHTML="Nós somos Cordados primatas";
+		  }
+
+		  var artigoLeao=()=>{
+			  var a1=document.getElementById("leao");
+			  a1.style.border="3px solid black";
+			  a1.innerHTML="<p> Leões são os segundo maiores felinos do planeta, ficando apenas atrás dos tigres, seu habitat natural são as savanas africanas. Eles vivem em grupos dominados por um macho alfa."
+			  }
+		
+		 var artigoLeaoApaga=()=>{
+			 var a1=document.getElementById("leao");
+			 a1.innerHTML="";
+			 a1.style.border="1px solid rgba(0,255,0,0)";
+		 }
+
+		  //______________________________EVENTOS___________________________________//
+
+		  function eventos(){
+			  var a=document.getElementsByTagName("button");
+			  a[0].addEventListener("click",curioso);
+
+			  var obj=document.getElementById("rodape");
+			  var obj2=document.querySelectorAll("ul#listaPrincipal li");
+
+			  
+			  obj2[0].addEventListener("mouseover", function(event){
+				  mudaCor(obj2[0],"rgba(0,255,0,.9");});
+			  obj2[0].addEventListener("mouseout", function(event){
+				  mudaCor(obj2[0],"black");
+			  });
+			  //_______________________________________//
+
+			  obj2[1].addEventListener("mouseover", function(event){
+				  mudaCor(obj2[1],"rgba(0,255,0,.9");});
+			  obj2[1].addEventListener("mouseout", function(event){
+				  mudaCor(obj2[1],"black");
+			  });
+
+			  obj2[2].addEventListener("mouseover", function(event){
+				  mudaCor(obj2[2],"rgba(0,255,0,.9");});
+			  obj2[2].addEventListener("mouseout", function(event){
+				  mudaCor(obj2[2],"black");
+			  });
+			
+			  obj2[3].addEventListener("mouseover", function(event){
+				  mudaCor(obj2[3],"rgba(0,255,0,.9");});
+			  obj2[3].addEventListener("mouseout", function(event){
+				  mudaCor(obj2[3],"black");
+			  });
+
+			  obj2[4].addEventListener("mouseover", function(event){
+				  mudaCor(obj2[4],"rgba(0,255,0,.9");});
+			  obj2[4].addEventListener("mouseout", function(event){
+				  mudaCor(obj2[4],"black");
+			  });
+
+			  obj2[5].addEventListener("mouseover", function(event){
+				  mudaCor(obj2[5],"rgba(0,255,0,.9");});
+			  obj2[5].addEventListener("mouseout", function(event){
+				  mudaCor(obj2[5],"black");
+			  });
+			  //_____________________________________________//
+              
+			  var objLeao=document.getElementById("leoa");
+			  objLeao.addEventListener("mouseover",artigoLeao);
+			  objLeao.addEventListener("mouseout" , artigoLeaoApaga);
+
+		  }
+
+		  
+			
+		  
+          
+		  window.addEventListener("load", eventos);
+	</script>
+	</html>
